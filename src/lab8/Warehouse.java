@@ -45,6 +45,8 @@ public class Warehouse {
             System.out.println(product.getQuantity() + " одиниць товару " + product.getName()
                     + " видалено зі складу. Загальна кількість: " + existingProduct.getQuantity());
         } else {
+            
+            
             throw new WarehouseException("Товар " + product.getName() + " не знайдено на складі.");
         }
     }

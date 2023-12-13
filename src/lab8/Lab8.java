@@ -16,9 +16,14 @@ public class Lab8 {
             System.out.println("2. Видалити товар");
             System.out.println("3. Показати весь товар на складі");
             System.out.println("4. Вийти");
-
-            int choice = scanner.nextInt();
-
+            int choice = 0;
+            try {
+                choice = scanner.nextInt();
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Помилка введення. Будь ласка, введіть ціле число.");
+                scanner.nextLine();
+                continue;
+            }
             switch (choice) {
                 case 1:
                     addProduct(warehouse, scanner);
